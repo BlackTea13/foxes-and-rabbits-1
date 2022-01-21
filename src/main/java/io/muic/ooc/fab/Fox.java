@@ -33,7 +33,7 @@ public class Fox extends Animal{
      * @param field The field currently occupied.
      * @param location The location within the field.
      */
-    public Fox(boolean randomAge, Field field, Location location) {
+    public Fox(boolean randomAge, Location location, Field field) {
         super(randomAge, location, field);
         foodLevel = RANDOM.nextInt(RABBIT_FOOD_VALUE);
 
@@ -114,7 +114,7 @@ public class Fox extends Animal{
         int births = breed();
         for (int b = 0; b < births && free.size() > 0; b++) {
             Location loc = free.remove(0);
-            Fox young = new Fox(false, getField(), loc);
+            Fox young = new Fox(false, getLocation(), getField());
             newFoxes.add(young);
         }
     }

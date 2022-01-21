@@ -26,7 +26,7 @@ public class Rabbit extends Animal{
      * @param field The field currently occupied.
      * @param location The location within the field.
      */
-    public Rabbit(boolean randomAge, Field field, Location location) {
+    public Rabbit(boolean randomAge, Location location, Field field) {
         super(randomAge, location, field);
     }
 
@@ -64,7 +64,7 @@ public class Rabbit extends Animal{
         int births = breed();
         for (int b = 0; b < births && free.size() > 0; b++) {
             Location loc = free.remove(0);
-            Rabbit young = new Rabbit(false, getField(), loc);
+            Rabbit young = new Rabbit(false, getLocation(), getField());
             newRabbits.add(young);
         }
     }
