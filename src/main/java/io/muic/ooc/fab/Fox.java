@@ -119,19 +119,6 @@ public class Fox extends Animal{
         }
     }
 
-    /**
-     * Generate a number representing the number of births, if it can breed.
-     *
-     * @return The number of births (may be zero).
-     */
-    private int breed() {
-        int births = 0;
-        if (canBreed() && RANDOM.nextDouble() <= getBreedingProbability()) {
-            births = RANDOM.nextInt(getMaxLitterSize()) + 1;
-        }
-        return births;
-    }
-
     @Override
     protected int getMaxAge() {
         return MAX_AGE;

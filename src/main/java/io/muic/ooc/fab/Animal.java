@@ -57,6 +57,19 @@ public abstract class Animal {
         }
     }
 
+    /**
+     * Generate a number representing the number of births, if it can breed.
+     *
+     * @return The number of births (may be zero).
+     */
+    protected int breed() {
+        int births = 0;
+        if (canBreed() && RANDOM.nextDouble() <= getBreedingProbability()) {
+            births = RANDOM.nextInt(getMaxLitterSize()) + 1;
+        }
+        return births;
+    }
+
 
     /**
      * Increase the age. This could result in the rabbit's death.
