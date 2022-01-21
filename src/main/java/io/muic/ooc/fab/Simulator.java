@@ -68,7 +68,6 @@ public class Simulator {
             @Override
             public void windowOpened(WindowEvent e) {
             }
-
             @Override
             public void windowClosing(WindowEvent e) {
                 System.exit(0);
