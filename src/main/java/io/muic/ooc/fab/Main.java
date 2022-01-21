@@ -7,3 +7,5 @@ public class Main {
         simulator.simulate(1000);
     }
 }
+
+//omg
